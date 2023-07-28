@@ -1,11 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
 import css from "./AppBar.module.css";
-import { AboutPage } from "../pages/AboutPage";
-import ContactPage from "../pages/Contact";
-import EducationPage from "../pages/Education";
-import ExperiencePage from "../pages/Experience";
-import ProjectsPage from "../pages/Projects";
-import SkilsPage from "../pages/Skils";
 
 export const AppBar = () => {
   return (
