@@ -1,11 +1,12 @@
 import { Link, Outlet } from "react-router-dom";
-import css from "./AppBar.module.css";
+import { User } from "../User/User";
+import { Container, Navcontainer } from "./AppBar.styled";
 
 export const AppBar = () => {
   return (
-    <>
-      <nav className={css.navcontainer}>
-        <div>HOME</div>
+    <Container>
+      <User />
+      <Navcontainer>
         <Link to="/about">About</Link>
         <Link to="/contact">contact</Link>
         <Link to="/education">education</Link>
@@ -13,7 +14,7 @@ export const AppBar = () => {
         <Link to="/projects">projects</Link>
         <Link to="/skils">skils</Link>
         <Outlet />
-      </nav>
-    </>
+      </Navcontainer>
+    </Container>
   );
 };
