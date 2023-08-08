@@ -1,10 +1,14 @@
 import { Link, Outlet } from "react-router-dom";
 import { User } from "../User/User";
-import { Container, Navcontainer } from "./AppBar.styled";
+import { Container, MobileContainer, Navcontainer } from "./AppBar.styled";
+import { AppMobileBar } from "../AppMobileBar/AppMobileBar";
 
 export const AppBar = () => {
   return (
     <Container>
+      <MobileContainer>
+        <AppMobileBar />
+      </MobileContainer>
       <User />
       <Navcontainer>
         <Link to="/about">About</Link>
