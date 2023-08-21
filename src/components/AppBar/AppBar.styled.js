@@ -1,42 +1,30 @@
 import styled from "styled-components";
 
 export const Navcontainer = styled.div`
-  @media screen and (min-width: 1001px) {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding-left: 15px;
-    gap: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 30px;
+  justify-content: space-evenly; // Рівномірно розтягнути контент по вертикалі
+  height: 100vh;
+  padding-top: 20px;
+  @media (max-width: 999px) {
+    height: 60vh;
   }
-  @media screen and (max-width: 1000px) {
-    display: none;
-  }
+`;
+
+export const Item = styled.li`
+  margin-bottom: 80px;
 `;
 
 export const Container = styled.div`
-  @media screen and (min-width: 1001px) {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-
-    width: 20vw;
-  }
-  @media screen and (max-width: 1000px) {
-    height: 30px;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-`;
-
-export const MobileContainer = styled.div`
-  @media screen and (min-width: 1001px) {
-    display: none;
-  }
-  @media screen and (max-width: 1000px) {
-    display: flex;
-    height: 100%;
-    justify-content: flex-end;
-    padding-right: 10px;
-    padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100px;
+  background-color: rgba(0, 0, 0, 0.5);
+  @media (max-width: 999px) {
+    width: 60px;
   }
 `;

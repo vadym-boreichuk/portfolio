@@ -1,0 +1,41 @@
+/* MyComponent.css */
+
+.responsive-icon {
+  font-size: 64px; /* Default size for large screens */
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 999px) {
+  /* Adjust icon size for smaller screens */
+  .responsive-icon {
+    font-size: 32px;
+  }
+}
+
+@keyframes animatedicons {
+  0% {
+    font-size: 64px;
+    color: black;
+  }
+
+  /* Довільна кількість проміжних кадрів */
+
+  100% {
+    font-size: 76px;
+    color: wheat;
+  }
+}
+
+.responsive-icon:hover {
+  animation: animatedicons 800ms;
+  /* animation-duration: 300ms; */
+  animation-fill-mode: forwards;
+  z-index: 2;
+  /* transform: scale(1); */
+  /* animation-iteration-count: 0; */
+  /* font-size: 96px; */
+  color: wheat;
+  cursor: pointer;
+}

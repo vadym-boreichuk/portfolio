@@ -1,3 +1,45 @@
+import { useEffect, useState } from "react";
+import { Modal } from "../components/modal/Modal";
+
 export const AboutPage = () => {
-  return <div>About</div>;
+  const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowModal(true);
+    }, 10000); // Відкрити модальне вікно через 3 секунди
+
+    return () => {
+      clearTimeout(timer); // Очищення таймера при зміні компоненту або закритті вікна
+    };
+  }, []);
+
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
+
+  const closeOnOverlayClick = () => {
+    setShowModal(false);
+  };
+
+  return (
+    <div>
+      {showModal && (
+        <Modal onClose={closeOnOverlayClick}>
+          <a href="../images/vadym.boreichuk@gmail.com.pdf" download>
+            {/* https://drive.google.com/file/d/1qE273A-qHaNqEsEpFUKxya5dpss-xFJc/view?usp=drive_link */}
+            Dowload CV FOR FREE!!!
+          </a>
+        </Modal>
+      )}
+      {/* <button onClick={toggleModal}>Open Modal</button>
+      {showModal && (
+        <Modal onClose={closeOnOverlayClick}>
+          <h2>My Modal Content</h2>
+          <p>This is the content of the modal window.</p>
+          <button onClick={toggleModal}>Close</button>
+        </Modal>
+      )} */}
+    </div>
+  );
 };
