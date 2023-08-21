@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "https://vadym-boreichuk.github.io/portfolio",
+  "homepage": "https://portfolio-vadym-boreichuk.vercel.app/",
   "private": true,
   "dependencies": {
     "@formkit/auto-animate": "^0.7.0",
