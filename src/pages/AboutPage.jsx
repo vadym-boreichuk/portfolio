@@ -14,9 +14,9 @@ export const AboutPage = () => {
     };
   }, []);
 
-  const toggleModal = () => {
-    setShowModal(!showModal);
-  };
+  // const toggleModal = () => {
+  //   setShowModal(!showModal);
+  // };
 
   const closeOnOverlayClick = () => {
     setShowModal(false);
