@@ -1,3 +1,11 @@
 export const ContactPage = () => {
-  return <p>ContactPage</p>;
+  return (
+    <div>
+      {" "}
+      ContactPage
+      <div
+        style={{ width: "900px", height: "800px", backgroundColor: "orange" }}
+      ></div>
+    </div>
+  );
 };

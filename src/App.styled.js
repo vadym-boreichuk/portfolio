@@ -5,7 +5,7 @@ import styled from "styled-components";
 import bg from "./images/8x5.jpg";
 
 export const Wrapper = styled.div`
-  display: flex;
+  /* display: flex; */
   &:before {
     content: "";
     background-image: url(${bg});

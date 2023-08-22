@@ -4,15 +4,15 @@ import { Modal } from "../components/modal/Modal";
 export const AboutPage = () => {
   const [showModal, setShowModal] = useState(false);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowModal(true);
-    }, 10000); // Відкрити модальне вікно через 3 секунди
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setShowModal(true);
+  //   }, 10000); // Відкрити модальне вікно через 3 секунди
 
-    return () => {
-      clearTimeout(timer); // Очищення таймера при зміні компоненту або закритті вікна
-    };
-  }, []);
+  //   return () => {
+  //     clearTimeout(timer); // Очищення таймера при зміні компоненту або закритті вікна
+  //   };
+  // }, []);
 
   // const toggleModal = () => {
   //   setShowModal(!showModal);
@@ -23,7 +23,11 @@ export const AboutPage = () => {
   };
 
   return (
-    <div>
+    <div style={{ marginTop: "100vh" }}>
+      AboutPage
+      <div
+        style={{ width: "900px", height: "800px", backgroundColor: "orange" }}
+      ></div>
       {showModal && (
         <Modal onClose={closeOnOverlayClick}>
           <a href="../images/vadym.boreichuk@gmail.com.pdf" download>

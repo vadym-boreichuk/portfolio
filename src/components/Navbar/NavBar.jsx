@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, Element } from "react-scroll";
 // import { Link } from "react-router-dom";
-import { Container } from "./NavBar.styled";
+import { Container, List } from "./NavBar.styled";
 import { AppBar } from "../AppBar/AppBar";
 import { AboutPage } from "../../pages/AboutPage";
 import { SkilsPage } from "../../pages/Skils";
@@ -13,53 +13,46 @@ import { Main } from "../../pages/Main/Main";
 export const NavBar = () => {
   return (
     <Container>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="section1" smooth={true} duration={500}>
-                AboutPage
-              </Link>
-            </li>
-            <li>
-              <Link to="section2" smooth={true} duration={500}>
-                EducationPage
-              </Link>
-              <li>
-                <Link to="section3" smooth={true} duration={500}>
-                  ExperiencePage
-                </Link>
-              </li>
-              <li>
-                <Link to="section4" smooth={true} duration={500}>
-                  ProjectsPage
-                </Link>
-              </li>
-              <li>
-                <Link to="section4" smooth={true} duration={500}>
-                  SkilsPage
-                </Link>
-              </li>
-            </li>
-          </ul>
-        </nav>
+      {/* <nav style={{ position: "fixed" }}> */}
+      <List>
+        <Link to="section1" smooth={true} duration={500}>
+          AboutPage
+        </Link>
 
-        <Element name="section1" className="section">
-          <AboutPage />
-        </Element>
-        <Element name="section2" className="section">
-          <EducationPage />
-        </Element>
-        <Element name="section3" className="section">
-          <ExperiencePage />
-        </Element>
-        <Element name="section4" className="section">
-          <ProjectsPage />
-        </Element>
-        <Element name="section4" className="section">
-          <SkilsPage />
-        </Element>
-      </div>
+        <Link to="section2" smooth={true} duration={500}>
+          EducationPage
+        </Link>
+
+        <Link to="section3" smooth={true} duration={500}>
+          ExperiencePage
+        </Link>
+
+        <Link to="section4" smooth={true} duration={500}>
+          ProjectsPage
+        </Link>
+
+        <Link to="section4" smooth={true} duration={500}>
+          SkilsPage
+        </Link>
+      </List>
+      {/* </nav> */}
+
+      <Element name="section1" className="section">
+        <AboutPage />
+      </Element>
+      <Element name="section2" className="section">
+        <EducationPage />
+      </Element>
+      <Element name="section3" className="section">
+        <ExperiencePage />
+      </Element>
+      <Element name="section4" className="section">
+        <ProjectsPage />
+      </Element>
+      <Element name="section4" className="section">
+        <SkilsPage />
+      </Element>
+
       {/* <Link to="/about">About</Link>
       <Link to="/contact">contact</Link>
       <Link to="/education">education</Link>
