@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Modal } from "../components/modal/Modal";
 
 export const AboutPage = () => {
   const [showModal, setShowModal] = useState(false);
-
+  // const containerRef = useRef(null);
   // useEffect(() => {
   //   const timer = setTimeout(() => {
   //     setShowModal(true);
@@ -24,7 +24,7 @@ export const AboutPage = () => {
 
   return (
     <div style={{ marginTop: "100vh" }}>
-      AboutPage
+      {/* <h2>{text}</h2> */}
       <div
         style={{ width: "900px", height: "800px", backgroundColor: "orange" }}
       ></div>

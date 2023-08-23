@@ -5,9 +5,8 @@ export const Navcontainer = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  /* margin-bottom: 30px; */
 
-  justify-content: space-evenly; // Рівномірно розтягнути контент по вертикалі
+  justify-content: space-evenly;
   height: 100%;
   padding-top: 20px;
   @media (max-width: 999px) {

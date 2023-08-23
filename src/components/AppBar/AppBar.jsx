@@ -11,31 +11,48 @@ export const AppBar = () => {
   return (
     <Container>
       <Navcontainer>
-        {/* <a
+        <a
+          className="link"
           href="https://github.com/vadym-boreichuk"
           target="_blank"
           rel="noreferrer noopener"
-        > */}
-        {/* </a> */}
-
-        <FiGithub className="responsive-icon" />
-
-        <SlSocialLinkedin className="responsive-icon" />
-
-        <LuMail className="responsive-icon" />
-
-        <SlCallIn className="responsive-icon" />
-
-        <PiTelegramLogo className="responsive-icon" />
+        >
+          <FiGithub className="responsive-icon" />
+        </a>
+        <a
+          className="link"
+          href="https://www.linkedin.com/in/vadym-boreichuk/"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <SlSocialLinkedin className="responsive-icon" />
+        </a>
+        <a
+          className="link"
+          href="mailto:vadym.boreichuk@gmail.com"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <LuMail className="responsive-icon" />
+        </a>
+        <a
+          className="link"
+          href="tel:+48575224387"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <SlCallIn className="responsive-icon" />
+        </a>
+        <a
+          className="link"
+          href="https://t.me/vados_frontend"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <PiTelegramLogo className="responsive-icon" />
+        </a>
       </Navcontainer>
       <Outlet />
     </Container>
   );
 };
-
-// <Link to="/about">About</Link>
-// <Link to="/contact">contact</Link>
-// <Link to="/education">education</Link>
-// <Link to="/experience">experience</Link>
-// <Link to="/projects">projects</Link>
-// <Link to="/skils">skils</Link>

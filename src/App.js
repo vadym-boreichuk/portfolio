@@ -15,16 +15,6 @@ export const App = () => {
     <Wrapper>
       <AppBar />
       <Main />
-
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="about" element={<AboutPage />} />
-        <Route path="contact" element={<ContactPage />} />
-        <Route path="education" element={<EducationPage />} />
-        <Route path="experience" element={<ExperiencePage />} />
-        <Route path="projects" element={<ProjectsPage />} />
-        <Route path="skils" element={<SkilsPage />} />
-      </Routes>
       <NavBar />
     </Wrapper>
   );
