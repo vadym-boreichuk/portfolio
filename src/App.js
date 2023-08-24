@@ -12,10 +12,12 @@ import { NavBar } from "./components/Navbar/NavBar";
 
 export const App = () => {
   return (
-    <Wrapper>
-      <AppBar />
-      <Main />
-      <NavBar />
-    </Wrapper>
+    <>
+      <Wrapper>
+        <AppBar />
+        <Main />
+        <NavBar />
+      </Wrapper>
+    </>
   );
 };

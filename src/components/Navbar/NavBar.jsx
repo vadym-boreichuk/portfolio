@@ -1,15 +1,14 @@
-import React, { forwardRef, useRef, useEffect } from "react";
+import React, { forwardRef, useRef, useEffect, useState } from "react";
 import * as Scroll from "react-scroll";
 import {
   Link,
-  Button,
   Element,
   Events,
   animateScroll as scroll,
   scrollSpy,
   scroller,
 } from "react-scroll";
-import { Container, List, StyledLink } from "./NavBar.styled";
+import { Container, List } from "./NavBar.styled";
 import { AboutPage } from "../../pages/AboutPage";
 import { SkilsPage } from "../../pages/Skils";
 import { ProjectsPage } from "../../pages/Projects";
@@ -18,32 +17,119 @@ import { EducationPage } from "../../pages/Education";
 import "./NavBar.css";
 
 export const NavBar = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const toggleVisibility = () => {
+    if (window.pageYOffset > 700) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+  window.addEventListener("scroll", toggleVisibility);
+
+  const scroolToTop = () => {
+    scroll.scrollToTop({
+      duration: 1000,
+      smooth: true,
+    });
+  };
+
   return (
     <Container>
       <List>
-        <Link spy={true} to="section1" smooth={true} duration={500}>
-          <StyledLink>AboutPage</StyledLink>
-        </Link>
-
-        <Link spy={true} to="section2" smooth={true} duration={500}>
-          <StyledLink>EducationPage</StyledLink>
+        <Link
+          style={{
+            position: "relative",
+            display: "inline-block",
+            fontSize: "24px",
+            border: "none",
+            backgroundColor: "rgba(0, 0, 0, 0)",
+            cursor: "pointer",
+          }}
+          // onSetActive={start}
+          // onSetInactive={end}
+          className="hover"
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          duration={500}
+          to="section1"
+        >
+          AboutPage
         </Link>
 
         <Link
-          className="aaa"
+          style={{
+            position: "relative",
+            display: "inline-block",
+            fontSize: "24px",
+            border: "none",
+            backgroundColor: "rgba(0, 0, 0, 0)",
+            cursor: "pointer",
+          }}
+          className="hover"
           activeClass="active"
           spy={true}
-          to="section3"
           smooth={true}
           duration={500}
+          to="section2"
         >
-          <StyledLink>ExperiencePage</StyledLink>
+          EducationPage
         </Link>
-        <Link to="section4" smooth={true} duration={500}>
-          <StyledLink>ProjectsPage</StyledLink>
+
+        <Link
+          style={{
+            position: "relative",
+            display: "inline-block",
+            fontSize: "24px",
+            border: "none",
+            backgroundColor: "rgba(0, 0, 0, 0)",
+            cursor: "pointer",
+          }}
+          className="hover"
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          duration={500}
+          to="section3"
+        >
+          ExperiencePage
         </Link>
-        <Link to="section5" smooth={true} duration={500}>
-          <StyledLink>SkilsPage</StyledLink>
+        <Link
+          style={{
+            position: "relative",
+            display: "inline-block",
+            fontSize: "24px",
+            border: "none",
+            backgroundColor: "rgba(0, 0, 0, 0)",
+            cursor: "pointer",
+          }}
+          className="hover"
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          duration={500}
+          to="section4"
+        >
+          ProjectsPage
+        </Link>
+        <Link
+          style={{
+            position: "relative",
+            display: "inline-block",
+            fontSize: "24px",
+            border: "none",
+            backgroundColor: "rgba(0, 0, 0, 0)",
+            cursor: "pointer",
+          }}
+          className="hover"
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          duration={500}
+          to="section5"
+        >
+          SkilsPage
         </Link>
       </List>
 
@@ -62,6 +148,11 @@ export const NavBar = () => {
       <Element name="section5" className="section">
         <SkilsPage />
       </Element>
+      {isVisible && (
+        <button className="scroll-button" onClick={scroolToTop}>
+          Наверх
+        </button>
+      )}
     </Container>
   );
 };
