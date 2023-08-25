@@ -4,7 +4,7 @@ import { AboutPage } from "./pages/AboutPage";
 import { ContactPage } from "./pages/Contact";
 import { EducationPage } from "./pages/Education";
 import { ExperiencePage } from "./pages/Experience";
-import { ProjectsPage } from "./pages/Projects";
+import { ProjectsPage } from "./pages/ProjectPage/Projects";
 import { SkilsPage } from "./pages/Skils";
 import { Wrapper } from "./App.styled";
 import { Main } from "./pages/Main/Main";
@@ -15,7 +15,7 @@ export const App = () => {
     <>
       <Wrapper>
         <AppBar />
-        <Main />
+        <Main style={{ paddingLeft: "30px" }} />
         <NavBar />
       </Wrapper>
     </>

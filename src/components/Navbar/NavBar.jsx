@@ -1,4 +1,10 @@
-import React, { forwardRef, useRef, useEffect, useState } from "react";
+import React, {
+  forwardRef,
+  useRef,
+  useEffect,
+  useState,
+  useContext,
+} from "react";
 import * as Scroll from "react-scroll";
 import {
   Link,
@@ -7,16 +13,20 @@ import {
   animateScroll as scroll,
   scrollSpy,
   scroller,
+  Button,
 } from "react-scroll";
-import { Container, List } from "./NavBar.styled";
+import { Centered, Container, List } from "./NavBar.styled";
 import { AboutPage } from "../../pages/AboutPage";
 import { SkilsPage } from "../../pages/Skils";
-import { ProjectsPage } from "../../pages/Projects";
+import { ProjectsPage } from "../../pages/ProjectPage/Projects";
 import { ExperiencePage } from "../../pages/Experience";
 import { EducationPage } from "../../pages/Education";
 import "./NavBar.css";
+import MyContext from "../../utils/constans/context";
 
 export const NavBar = () => {
+  let color = useContext(MyContext);
+
   const [isVisible, setIsVisible] = useState(false);
   const toggleVisibility = () => {
     if (window.pageYOffset > 700) {
@@ -133,6 +143,7 @@ export const NavBar = () => {
         </Link>
       </List>
 
+      {/* <Centered> */}
       <Element name="section1" className="section">
         <AboutPage />
       </Element>
@@ -148,6 +159,7 @@ export const NavBar = () => {
       <Element name="section5" className="section">
         <SkilsPage />
       </Element>
+      {/* </Centered> */}
       {isVisible && (
         <button className="scroll-button" onClick={scroolToTop}>
           Наверх

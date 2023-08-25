@@ -26,7 +26,11 @@ export const AboutPage = () => {
     <div style={{ marginTop: "100vh" }}>
       {/* <h2>{text}</h2> */}
       <div
-        style={{ width: "900px", height: "800px", backgroundColor: "orange" }}
+        style={{
+          width: "800px",
+          height: "800px",
+          backgroundColor: "orange",
+        }}
       ></div>
       {showModal && (
         <Modal onClose={closeOnOverlayClick}>

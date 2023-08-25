@@ -5,6 +5,13 @@ import styled from "styled-components";
 import bg from "./images/8x5.jpg";
 
 export const Wrapper = styled.div`
+  /* max-width: 1440px; */
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  max-width: 1900px;
+  /* padding-left: 30px; */
   /* display: flex; */
   &:before {
     content: "";
