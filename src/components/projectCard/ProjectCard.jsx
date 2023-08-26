@@ -1,11 +1,12 @@
 import { Description, ImageBox, Thumb, Title } from "./ProjectCard.styled";
 import pidpal from "../../images/pidpal.png";
+import "./ProjectCard.css";
 
 export const ProjectCard = ({ title, img, alt, description }) => {
   return (
     <>
-      <Title>{title}</Title>
-      <Thumb>
+      <Thumb className="box">
+        <Title>{title}</Title>
         <ImageBox>
           <img srcSet={`${img}`} width="300px" alt={`${alt}`} />
         </ImageBox>

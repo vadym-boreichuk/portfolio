@@ -7,7 +7,6 @@ export const Thumb = styled.div`
   border-radius: 25px;
   width: 60%;
   padding: 15px;
-  background-color: wheat;
 `;
 
 export const Title = styled.h2``;
