@@ -14,7 +14,7 @@ export const ProjectsPage = () => {
   const settings = {
     // arrows: false,
     infinite: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 8000,
     speed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
