@@ -19,3 +19,9 @@
   /* opacity: 0.75; */
   color: red !important;
 }
+
+.slick-slide {
+}
+
+/* transform: scale(1.2); Наприклад, збільшення для виділення активного елемента
+  transition: transform 0.3s ease-in-out; */

@@ -1,15 +1,15 @@
 import { styled } from "styled-components";
 
 export const Container = styled.div`
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
-  border: 0.1px solid black;
+  /* border: 0.1px solid black; */
   display: flex;
+  padding: 0 30px;
+  /* margin-right: 100px; */
   flex-direction: column;
-  gap: 30px;
-  /* justify-content: space-between; */
-
-  margin: 0 auto; /* Для центрування контейнера */
+  /* gap: 30px; */
+  margin: 0 auto;
 `;
 
 export const Left = styled.div`
@@ -31,15 +31,4 @@ export const Custom = styled.div`
   background-color: #e5e7e9;
   border-radius: 4px;
   position: relative;
-`;
-
-export const Loading = styled.div`
-  height: 8px;
-  /* animation: scale(1) 1s ease-in; */
-  background-color: black;
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 4px;
 `;
