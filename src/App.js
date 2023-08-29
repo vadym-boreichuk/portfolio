@@ -7,7 +7,7 @@ import { ExperiencePage } from "./pages/Experience";
 import { ProjectsPage } from "./pages/ProjectPage/Projects";
 import { SkilsPage } from "./pages/Skils";
 import { Wrapper } from "./App.styled";
-import { Main } from "./pages/Main/Main";
+// import { Main } from "./pages/Main/Main";
 import { NavBar } from "./components/Navbar/NavBar";
 
 export const App = () => {
@@ -15,7 +15,7 @@ export const App = () => {
     <>
       <Wrapper>
         <AppBar />
-        <Main style={{ paddingLeft: "30px" }} />
+        {/* <Main style={{ paddingLeft: "30px" }} /> */}
         <NavBar />
       </Wrapper>
     </>

@@ -162,7 +162,7 @@ export const NavBar = () => {
       {/* </Centered> */}
       {isVisible && (
         <button className="scroll-button" onClick={scroolToTop}>
-          Наверх
+          UP
         </button>
       )}
     </Container>

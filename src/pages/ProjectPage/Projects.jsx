@@ -19,10 +19,7 @@ export const ProjectsPage = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     adaptiveHeight: true,
-    // centerPadding: 5000,
     autoplay: true,
-    pauseOnDotsHover: true,
-    // fade: true,
   };
 
   return (
