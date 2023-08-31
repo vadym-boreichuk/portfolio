@@ -1,10 +1,4 @@
-import React, {
-  forwardRef,
-  useRef,
-  useEffect,
-  useState,
-  useContext,
-} from "react";
+import React, { useState, useContext } from "react";
 import * as Scroll from "react-scroll";
 import {
   Link,
