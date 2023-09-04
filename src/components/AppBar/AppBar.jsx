@@ -6,11 +6,118 @@ import { LuMail } from "react-icons/lu";
 import { SlCallIn } from "react-icons/sl";
 import { PiTelegramLogo } from "react-icons/pi";
 import "./AppBar.css";
+import { NavBar } from "../Navbar/NavBar";
+
+import {
+  Link,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+  Button,
+} from "react-scroll";
 
 export const AppBar = () => {
   return (
     <Container>
-      <Navcontainer>
+      <ul>
+        <Link
+          style={{
+            position: "relative",
+            display: "inline-block",
+            fontSize: "24px",
+            border: "none",
+            backgroundColor: "rgba(0, 0, 0, 0)",
+            cursor: "pointer",
+          }}
+          // onSetActive={start}
+          // onSetInactive={end}
+          className="hover"
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          duration={500}
+          to="section1"
+        >
+          AboutPage
+        </Link>
+
+        <Link
+          style={{
+            position: "relative",
+            display: "inline-block",
+            fontSize: "24px",
+            border: "none",
+            backgroundColor: "rgba(0, 0, 0, 0)",
+            cursor: "pointer",
+          }}
+          className="hover"
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          duration={500}
+          to="section2"
+        >
+          EducationPage
+        </Link>
+
+        <Link
+          style={{
+            position: "relative",
+            display: "inline-block",
+            fontSize: "24px",
+            border: "none",
+            backgroundColor: "rgba(0, 0, 0, 0)",
+            cursor: "pointer",
+          }}
+          className="hover"
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          duration={500}
+          to="section3"
+        >
+          ExperiencePage
+        </Link>
+        <Link
+          style={{
+            position: "relative",
+            display: "inline-block",
+            fontSize: "24px",
+            border: "none",
+            backgroundColor: "rgba(0, 0, 0, 0)",
+            cursor: "pointer",
+          }}
+          className="hover"
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          duration={500}
+          to="section4"
+        >
+          ProjectsPage
+        </Link>
+        <Link
+          style={{
+            position: "relative",
+            display: "inline-block",
+            fontSize: "24px",
+            border: "none",
+            backgroundColor: "rgba(0, 0, 0, 0)",
+            cursor: "pointer",
+          }}
+          className="hover"
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          duration={500}
+          to="section5"
+        >
+          SkilsPage
+        </Link>
+      </ul>
+      {/* <Navcontainer>
         <a
           className="link"
           href="https://github.com/vadym-boreichuk"
@@ -51,7 +158,7 @@ export const AppBar = () => {
         >
           <PiTelegramLogo className="responsive-icon" />
         </a>
-      </Navcontainer>
+      </Navcontainer> */}
       <Outlet />
     </Container>
   );

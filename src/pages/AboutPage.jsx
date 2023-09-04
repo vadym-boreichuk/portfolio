@@ -23,7 +23,8 @@ export const AboutPage = () => {
   };
 
   return (
-    <div style={{ marginTop: "100vh" }}>
+    <div>
+      {/* style={{ marginTop: "100vh" }} */}
       {/* <h2>{text}</h2> */}
       <div
         style={{
