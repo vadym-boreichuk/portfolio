@@ -39,7 +39,7 @@ export const NavBar = () => {
   };
 
   return (
-    <Container>
+    <>
       <List>
         <Link
           style={{
@@ -136,29 +136,29 @@ export const NavBar = () => {
           SkilsPage
         </Link>
       </List>
-
-      {/* <Centered> */}
-      <Element name="section1" className="section">
-        <AboutPage />
-      </Element>
-      <Element name="section2" className="section">
-        <EducationPage />
-      </Element>
-      <Element name="section3" className="section">
-        <ExperiencePage />
-      </Element>
-      <Element name="section4" className="section">
-        <ProjectsPage />
-      </Element>
-      <Element name="section5" className="section">
-        <SkilsPage />
-      </Element>
-      {/* </Centered> */}
-      {isVisible && (
-        <button className="scroll-button" onClick={scroolToTop}>
-          UP
-        </button>
-      )}
-    </Container>
+      <Container>
+        <Element name="section1" className="section">
+          <AboutPage />
+        </Element>
+        <Element name="section2" className="section">
+          <EducationPage />
+        </Element>
+        <Element name="section3" className="section">
+          <ExperiencePage />
+        </Element>
+        <Element name="section4" className="section">
+          <ProjectsPage />
+        </Element>
+        <Element name="section5" className="section">
+          <SkilsPage />
+        </Element>
+        {/* </Centered> */}
+        {isVisible && (
+          <button className="scroll-button" onClick={scroolToTop}>
+            UP
+          </button>
+        )}
+      </Container>
+    </>
   );
 };
